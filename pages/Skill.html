@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      margin: 2rem;
+      color: #111827;
+      max-width: 600px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      font-size: 1.125rem;
+    }
+
+    .progress-bar {
+      position: relative;
+      background: #e5e7eb;
+      border-radius: 9999px;
+      height: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      height: 100%;
+      width: 0;
+      border-radius: 9999px 0 0 9999px;
+      transition: width 1.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 0.75rem;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      box-sizing: border-box;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Skills</h1>
+
+  <div id="skills-container">
+    <!-- Skills will be injected here -->
+  </div>
+
+  <script>
+    // Skills data - add or modify skills here
+    const skills = [
+      { name: 'HTML', level: 98 },
+      { name: 'CSS', level: 95 },
+      { name: 'JavaScript', level: 90 },
+      { name: 'React', level: 85 },
+      { name: 'Tailwind CSS', level: 80 }
+    ];
+
+    const container = document.getElementById('skills-container');
+
+    skills.forEach(({ name, level }) => {
+      // Create skill wrapper
+      const skillDiv = document.createElement('div');
+      skillDiv.className = 'skill';
+
+      // Skill name
+      const skillName = document.createElement('div');
+      skillName.className = 'skill-name';
+      skillName.textContent = name;
+
+      // Progress bar container
+      const progressBar = document.createElement('div');
+      progressBar.className = 'progress-bar';
+
+      // Progress fill bar
+      const progressFill = document.createElement('div');
+      progressFill.className = 'progress-fill';
+      progressFill.textContent = `${level}%`;
+
+      // Append fill to bar and bar to skill div
+      progressBar.appendChild(progressFill);
+      skillDiv.appendChild(skillName);
+      skillDiv.appendChild(progressBar);
+      container.appendChild(skillDiv);
+
+      // Animate progress fill width with a slight delay for smooth effect
+      setTimeout(() => {
+        progressFill.style.width = level + '%';
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+     <style>
+        /* Apply box-sizing globally for better sizing control */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Main container with flex and gap */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px; /* Equal gap between left and right containers */
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Left container with vertical flex and gap */
+        .left-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 80px; /* Equal vertical gaps between text elements */
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        /* Image container */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: slideInRight 1s ease forwards;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h6 {
+            font-weight: 600;
+            color: #555;
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin: 0;
+            color: #102d4d;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive: stack vertically on small screens */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .left-container,
+            .image-container {
+                width: 100%;
+                text-align: center;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+        <div class="header-six">
+                <h6>About me</h6>
+        </div>
+        <div class="header-two">
+            <h2>Who is Lydia Kebede?</h2>
+        </div>
+        <div class="para-one">
+            <p>
+                Hi, I’m Lydia Kebede — a front-end developer passionate about creating clean, responsive, and user-friendly websites. I’m currently learning React and Django while building real-world projects. Outside of coding, I love fashion design and bringing creativity into everything I do.
+            </p>
+        </div>
+        <div class="header-three">
+             <h3>10+</h3>
+             <p class="end">Projects completed</p>
+        </div>
+            
+            
+           
+           
+        </div>
+        <div class="image-container">
+            <img src="../assets/Rounded rectangle.png" alt="profile-pic" />
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me</title>
+  
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif, Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 2rem;
+      color: #111827;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #1f2937;
+    }
+    
+    p {
+      line-height: 1.6;
+      margin: 0.25rem 0 1rem 0;
+      color: #4b5563;
+    }
+    
+    .main-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .first-box {
+      margin-bottom: 2rem;
+      margin-left: 10rem;
+    }
+    
+    .icon-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: fadeSlideIn 0.6s forwards;
+    }
+    /* Staggered animation delays */
+    .icon-row:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    .icon-row:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    .icon-row:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+    
+    .material-icons {
+      font-size: 36px;
+      color: #0e0e0f;
+      margin-right: 1rem;
+      min-width: 36px;
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: default;
+    }
+    /* Hover effect on icons */
+    .material-icons:hover,
+    .material-icons:focus {
+      color: #2563eb;
+      transform: scale(1.2);
+      outline: none;
+    }
+    
+    .icon-text {
+      flex: 1;
+    }
+    
+    .icon-text strong {
+      display: block;
+      font-weight: 600;
+      color: #0e0f0f;
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+    }
+    
+    /* Social media section */
+    .social-media-links h5 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+      opacity: 0;
+      animation: fadeSlideIn 0.6s forwards;
+      animation-delay: 0.7s;
+    }
+    
+    .icons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: start;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeSlideIn 0.6s forwards;
+      animation-delay: 0.9s;
+    }
+    
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #e0e7ff;
+      color: #0d0d0f;
+      text-decoration: none;
+      font-size: 28px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .social-icon:hover,
+    .social-icon:focus {
+      background-color: #090c12;
+      color: white;
+      transform: scale(1.15);
+      outline: none;
+    }
+    
+    /* Keyframes for fade + slide in */
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="first-box">
+      <div class="header-one">
+        <h2>Get in touch</h2>
+      </div>
+      <div class="paragraph-one">
+        <p>
+          Feel free to reach out if you have any questions, ideas, or just want to say hello.
+          Reach me directly through my social media or contact details below. Looking forward to hearing from you!
+        </p>
+      </div>
+      
+      <div class="icon">
+        <div class="icon-row">
+          <span class="material-icons" aria-hidden="true" tabindex="0">location_on</span>
+          <div class="icon-text">
+            <strong>Address</strong>
+            Addis Alem, Ethiopia
+          </div>
+        </div>
+        
+        <div class="icon-row">
+          <span class="material-icons" aria-hidden="true" tabindex="0">phone</span>
+          <div class="icon-text">
+            <strong>Phone</strong>
+            +251-36-36-95-67
+          </div>
+        </div>
+        
+        <div class="icon-row">
+          <span class="material-icons" aria-hidden="true" tabindex="0">email</span>
+          <div class="icon-text">
+            <strong>Email</strong>
+            example@email.com
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="social-media-links">
+      <h5>Social Media Links</h5>
+    </div>
+    
+    <div class="icons" role="list">
+      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" role="listitem">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+          <circle cx="12" cy="12" r="3.25"/>
+        </svg>
+      </a>
+      
+      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter" role="listitem">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M23 3a10.9 10.9 0 01-3.14.86 5.48 5.48 0 002.4-3.02 10.9 10.9 0 01-3.46 1.32 5.44 5.44 0 00-9.27 4.96A15.44 15.44 0 012 4.89a5.44 5.44 0 001.68 7.26 5.4 5.4 0 01-2.46-.68v.07a5.44 5.44 0 004.36 5.33 5.5 5.5 0 01-2.45.1 5.44 5.44 0 005.08 3.77A10.9 10.9 0 013 19.54a15.4 15.4 0 008.29 2.43c9.94 0 15.38-8.24 15.38-15.38 0-.23 0-.46-.02-.68A11 11 0 0023 3z"/>
+        </svg>
+      </a>
+      
+      <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram" role="listitem">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M9.04 16.57l-.39 5.5a.75.75 0 001.08.71l2.9-2.14 5.99 4.4a.75.75 0 001.19-.83l-8.66-12.4-12.5-4.1a.75.75 0 00-.7 1.3l4.97 3.1 11.54-7.3a.75.75 0 011.13.8l-2.1 9.72a.75.75 0 01-1.28.48l-7.28-6.8z"/>
+        </svg>
+      </a>
+      
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" role="listitem">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 7h4.98v14H.5V7zm7.5 0h4.77v1.89h.07c.66-1.25 2.28-2.58 4.7-2.58 5.03 0 5.96 3.31 5.96 7.61V21H17v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.66V21H7.99V7z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

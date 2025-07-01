@@ -1,0 +1,61 @@
+/* Hide sidebar by default */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* hide off screen */
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  padding-top: 60px; /* space for navbar height */
+  transition: left 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.5);
+}
+
+/* Sidebar visible */
+.sidebar.active {
+  left: 0;
+}
+
+/* Sidebar links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #1095c1; /* your hover color */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  user-select: none;
+}
+
+/* Show hamburger on mobile/tablet */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar .nav-links {
+    display: none; /* hide original nav links on smaller screens */
+  }
+}

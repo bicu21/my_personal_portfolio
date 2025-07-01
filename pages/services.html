@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My services</title>
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+  <style>
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif; 
+      color: #000000;
+      background-color: #ffffff; 
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      font-family: 'Inter', sans-serif; 
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.2s;
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .services {
+      display: flex;
+      gap: 50px;
+      width: 100%;
+      height: 70vh;
+    }
+    .serve {
+      flex: 1;
+      background-color: #000000;
+      border-radius: 30px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUpFadeIn 0.6s forwards;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    .serve:nth-child(1) { animation-delay: 0.5s; }
+    .serve:nth-child(2) { animation-delay: 0.7s; }
+    .serve:nth-child(3) { animation-delay: 0.9s; }
+    .serve:hover {
+      transform: scale(1.1) translateY(-10px);
+      box-shadow: 0 15px 30px rgba(14, 8, 1, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    @keyframes slideUpFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        height: auto;
+      }
+      .serve {
+        margin: 10px 0;
+        width: 100%;
+        flex: none;
+      }
+    }
+    .ui-header, .web-header, .app-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+    .ui-header h2, .web-header h2, .app-header h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .ui-header img, .web-header img, .app-header img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .ui-para, .web-para, .app-para {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      color: #e0e0e0;
+      padding: 0 10px;
+      max-width: 320px;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <h1>My services</h1>
+    </div>
+    <div class="services">
+      <div class="serve">
+        <div class="ui-header">
+          <h2 class="ui">UI/UX design</h2>
+          <img class="ui-image" src="../assets/Frame (2).png" alt="ui-symbol">
+          <p class="ui-para">
+            Responsive and modern interfaces with clean layouts, smooth navigation, and accessible components, ensuring an optimal user experience on any device.
+          </p>
+        </div>
+      </div>
+      <div class="serve">
+        <div class="web-header">
+          <h2 class="web">Web development</h2>
+          <img class="web-image" src="../assets/Frame.png" alt="web-symbol">
+          <p class="web-para">
+            Robust and scalable websites built with best practices, featuring intuitive navigation, fast loading times, and seamless responsiveness for all users.
+          </p>
+        </div>
+      </div>
+      <div class="serve">
+        <div class="app-header">
+          <h2 class="app">App development</h2>
+          <img class="app-image" src="../assets/Frame (1).png" alt="app-symbol">
+          <p class="app-para">
+            Sleek and intuitive mobile apps designed for touch, with minimal layouts, smooth flows, and responsive elements for a consistent experience everywhere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

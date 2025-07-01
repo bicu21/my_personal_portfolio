@@ -1,0 +1,32 @@
+/* HTML: <div class="loader"></div> */
+.welcome {
+  width: fit-content;
+  font-size: 40px;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background: conic-gradient(#000 0 0) text;
+  animation: l8 2s linear infinite;
+  margin-top: 25%;
+  margin-left: 30%;
+  
+}
+.welcome:before {
+  content: "Welcome to my portfolio";
+}
+.welcome {
+  /* ...your existing styles... */
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.welcome.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes l8 {
+  0%,2%,8%,11%,15%,21%,30%,32%,35%,40%,46%,47%,53%,61%,70%,72%,77%,80%,86%   {background-size: 0    0   }
+  1%,9%,10%,16%,20%,31%,34%,41%,45%,48%,52%,55%,60%,73%,76%,81%,85%,96%,100% {background-size: 100% 100%}
+}
